@@ -26,6 +26,10 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  if Rails.env.development?
+  BetterErrors::Middleware.allow_ip! "0.0.0.0/0"
+  end
+
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
