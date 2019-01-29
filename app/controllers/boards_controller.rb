@@ -1,3 +1,4 @@
+# binding.pryでデバッグできる
 class BoardsController < ApplicationController
   def index
     @board = Board.all
@@ -8,8 +9,16 @@ class BoardsController < ApplicationController
   end
 
   def create
-    board = Board.create(board_params)
-    redirect_to board
+    board = Board.new(board_params)
+    if board.save
+      redirect_to "/boards"
+    else
+      redirect_to :back
+    end
+  end
+
+  def edit
+
   end
 
   private

@@ -8,7 +8,6 @@
       <a class="blog-header-logo text-dark" href="#">LOGO</a>
     </div>
     <div class="col-4 d-flex justify-content-end align-items-center">
-      <%= link_to "投稿", new_board_path, class: "btn btn-sm btn-outline-secondary" %>
       <%= link_to "Sign up", "#", class: "btn btn-sm btn-outline-secondary" %>
     </div>
   </div>
@@ -24,23 +23,28 @@
 <div id="top" class="jumbotron p-3 p-md-5 text-dark rounded bg-white">
   <div class="col-md-6 px-0">
     <h1 class="display-4 font-weight-bold">トップページ</h1>
-    <p class="lead my-3">よろしく</p>
+    <p class="lead my-2">このページは今まで投稿した記事の一覧です。下の「<b>＋</b>」ボタンを押すと、記事を投稿するページに移動します。</p>
   </div>
+  <%= link_to "+", new_board_path, class: "pos btn .btn-{themecolor}.rounded-pill btn-outline-secondary w-100 mt-2" %>
 </div>
 <!-- 投稿一覧 -->
-<% @board.each do |board| %>
-  <div class="row mb-2">
-    <div class="col-md-6">
-      <div class="card flex-md-row mb-4 shadow-sm h-md-250">
-        <div class="card-body d-flex flex-column align-items-start">
-          <strong class="d-inline-block mb-2 text-primary">タグ表示</strong>
-          <h3 class="mb-0">
-            <%= link_to board.title, "#", class: "text-dark" %>
-          </h3>
-          <div class="mb-1 text-muted"><%= board.created_at %></div>
-          <p class="card-text mb-auto">イメージ表示</p>
-          <a href="#">Continue reading</a>
+<div class="album py-5 bg-light">
+  <div class="container-fluid">
+      <div class="row">
+        <% @board.each do |board| %>
+        <div class="col-lg-4">
+          <img class="card-img-top" src="https://source.unsplash.com/random/150*150" alt="Card image cap">
+          <div class="card-img-top">
+            <div class="card-body d-flex flex-column align-items-start">
+              <h3 class="mb-0">
+                <%= link_to board.title, "#", class: "text-dark" %>
+              </h3>
+              <small class="mb-1 text-muted"><%= board.created_at.strftime('%Y年%m月%d日') %></small>
+              <div class="d-inline-block mb-2 text-primary">タグ表示</div>
+            </div>
+          </div>
         </div>
+        <% end %>
       </div>
-    </div>
-  <% end %>
+  </div>
+</div>

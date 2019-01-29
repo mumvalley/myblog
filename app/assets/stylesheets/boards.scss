@@ -4,3 +4,23 @@
 #top {
   background: #C1D8AC; // 裏葉柳
 }
+
+.pos{
+  display: inline-block;
+  text-decoration: none;
+  color: darkgray;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  border: solid 2px darkgray;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 2em;
+  transition: .1s;
+}
+
+.pos:hover {
+    background: dark;
+}
