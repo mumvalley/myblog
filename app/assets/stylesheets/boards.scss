@@ -1,10 +1,19 @@
 // Place all the styles related to the memo controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// 全体のCSS
+.html {
+  // font-family: 'Sawarabi Gothic', sans-serif;
+  font-family: 'Kosugi Maru', sans-serif;
+}
+
+// ?
 #top {
   background: #C1D8AC; // 裏葉柳
 }
 
+// 新規投稿画面へのリンクボタン [+]
 .pos{
   display: inline-block;
   text-decoration: none;
@@ -17,8 +26,7 @@
   vertical-align: middle;
   overflow: hidden;
   font-weight: bold;
-  font-size: 2em;
-  transition: .1s;
+  font-size: 2em
 }
 
 .pos:hover {
