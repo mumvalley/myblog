@@ -15,7 +15,8 @@ class BoardsController < ApplicationController
   def create
     board = Board.new(board_params)
     if board.save
-      redirect_to "/boards"
+      flash[:success] = "#{board.title}の記事を投稿しました"
+      redirect_to boards_path
     else
       redirect_to :back
     end
@@ -31,11 +32,14 @@ class BoardsController < ApplicationController
 
   def update
     @board.update(board_params)
+    flash[:success] = "#{@board.title}の記事を更新しました"
     redirect_to @board
   end
 
   def destroy
-
+    @board.destroy
+    flash[:danger] = "#{@board.title}の記事を削除しました"
+    redirect_to boards_path
   end
 
   private

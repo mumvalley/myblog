@@ -13,6 +13,15 @@
   <body>
     <div class="html container-fluid">
       <%= render 'header' %>
+      <div class="center-block">
+        <% flash.each do |type, msg| %>
+          <% type = 'success' if type == 'success' %>
+          <% type = 'error' if type == 'danger' %>
+          <script>
+            toastr['<%= type %>']('<%= msg %>');
+          </script>
+        <% end %>
+      </div>
       <%= yield %>
     </div>
   </body>

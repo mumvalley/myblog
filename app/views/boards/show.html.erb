@@ -11,6 +11,6 @@
   </div>
   <div class="card-body">
       <p class="card-text text-center"><%= @board.body %></p>
-      <%= link_to "削除", "#", class: "btn btn-sm float-right btn-outline-secondary" %>
+      <%= link_to "削除", @board, class: "btn btn-sm float-right btn-outline-secondary", method: :delete, data: {confirm: "本当に#{@board.title}を削除してもよろしいですか？", cancel: "キャンセル", commit: "削除", title: "削除の確認"} %>
   </div>
 </div>
