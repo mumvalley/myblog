@@ -1,22 +1,10 @@
-<!-- フラッシュ -->
-<%
-=begin
-%>
-<% if flash[:success] %>
-<div class="alert alert-primary"><%= flash[:success] %></div>
-<% else %>
-<div class="alert alert-danger"><%= flash[:danger] %></div>
-<% end %>
-<%
-=end
-%>
 <!-- トップ -->
 <div id="top" class="jumbotron p-3 p-md-5 text-dark rounded bg-white">
   <div class="col-md-6 px-0">
     <h1 class="display-4 font-weight-bold">トップページ</h1>
-    <p class="lead my-2">このページは今まで投稿した記事の一覧です。</br>下の「<b>＋</b>」ボタンを押すと、記事を投稿するページに移動します。</p>
+    <p class="lead my-2">このページは今まで投稿した記事の一覧です。</br>下の<b class="tasu"> ＋ </b>ボタンを押すと、記事を投稿するページに移動します。</p>
   </div>
-  <%= link_to "+", new_board_path, class: "pos btn .btn-{themecolor}.rounded-pill btn-outline-secondary w-100 mt-5" %>
+  <%= link_to "+", new_board_path, class: "pos btn-{themecolor}.rounded-pill btn-outline-secondary w-100 mt-5" %>
 </div>
 <!-- 投稿一覧 -->
 <div class="py-5 bg-light">

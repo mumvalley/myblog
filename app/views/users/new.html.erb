@@ -1,0 +1,20 @@
+<div class="text-center">
+    <div class="form-signin">
+      <h1 class="h3 m-3 font-weight-normal">サインアップしてください</h1>
+        <%= form_for(@user) do |f| %>
+         <%= f.label :name, :class => "mt-1" %>
+         <%= f.text_field :name, :class => "form-control", :placeholder => "名前の入力" %>
+
+         <%= f.label :email, :class => "mt-1" %>
+         <%= f.email_field :email, :class => "form-control", :placeholder => "メアドの入力" %>
+
+         <%= f.label :password, :class => "mt-1" %>
+         <%= f.password_field :password, :class => "form-control", :placeholder => "パスワードの入力" %>
+
+         <%= f.label :password_confirmation, :class => "mt-1" %>
+         <%= f.password_field :password_confirmation, :class => "form-control", :placeholder => "再度パスワードの入力" %>
+
+         <%= f.submit "登録", class: "mt-4 btn btn-md btn-primary btn-block" %>
+     <% end %>
+    </div>
+</div>
