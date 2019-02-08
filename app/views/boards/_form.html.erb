@@ -1,5 +1,5 @@
+<%= render 'shared/error_messages'%>
 <%= form_with model: @board do |f| %>
-  <%= render 'shared/error_messages'%>
     <div class="mx-2 form-group">
         <%= f.label :title, '投稿タイトル' %>
         <%= f.text_field :title, class: 'form-control' %>

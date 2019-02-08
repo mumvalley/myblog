@@ -2,7 +2,7 @@
     <div class="form-signin">
       <h1 class="h3 m-3 font-weight-normal">サインアップのページ</h1>
         <%= form_with model: @user do |f| %>
-          <%= render 'shared/error_messages', model: f.object %>
+          <%= render 'shared/error_messages'%>
          <%= f.label :name, :class => "mt-1" %>
          <%= f.text_field :name, :class => "form-control", :placeholder => "名前の入力" %>
 

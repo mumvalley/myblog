@@ -8,7 +8,7 @@ class BoardsController < ApplicationController
 
   # 新規作成画面表示
   def new
-    @board = Board.new
+    @board = Board.new(flash[:board])
   end
 
   # 新規作成画面の入力を受けて登録処理
@@ -18,7 +18,10 @@ class BoardsController < ApplicationController
       flash[:success] = "#{board.title}の記事を投稿しました"
       redirect_to boards_path
     else
-      redirect_to :back
+      redirect_to new_board_path, flash: {
+        board: board,
+        error_messages: board.errors.full_messages
+      }
     end
   end
 

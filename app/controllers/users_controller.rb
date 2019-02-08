@@ -13,7 +13,9 @@ class UsersController < ApplicationController
     if @user.save
 
     else
-      render 'new'
+      redirect_to new_user_path, flash: {
+        error_messages: @user.errors.full_messages
+      }
     end
   end
 

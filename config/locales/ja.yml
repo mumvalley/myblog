@@ -1,15 +1,15 @@
 ja:
   views:
     pagination:
-      first: '最初'
-      last: '最後'
-      previous: '前'
-      next: '次'
-      truncate: '...'
+      first: 最初
+      last: 最後
+      previous: 前
+      next: 次
+      truncate: ...
   activerecord:
     attributes:
       user:
-        name: "名前"
-        email: "Eメール"
-        password: "パスワード"
-        password_confirmation: "確認のため再度パスワードの入力"
+        name: 名前
+        email: Eメール
+        password: パスワード
+        password_confirmation: 確認のため再度パスワードの入力
