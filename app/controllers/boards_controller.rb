@@ -18,6 +18,7 @@ class BoardsController < ApplicationController
       flash[:success] = "#{board.title}の記事を投稿しました"
       redirect_to boards_path
     else
+      binding.pry
       redirect_to :back
     end
   end

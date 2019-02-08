@@ -18,12 +18,20 @@
         <% flash.each do |type, msg| %>
           <% type = 'success' if type == 'success' %>
           <% type = 'error' if type == 'danger' %>
+          <% type = 'warning' if type == 'alert' %>
           <script>
             toastr['<%= type %>']('<%= msg %>');
           </script>
         <% end %>
       </div>
       <%= yield %>
+      <!-- フッター -->
+
+      <footer class="blog-footer text-center mt-5">
+       <p><%= link_to 'このブログについて', "#" %></p>
+       <p>©️ 2019 Huttsu no Blog</p>
+       </footer>
+       <!-- フレーム -->
         <div id="websiteFrameTop" class="websiteFrame"></div>
         <div id="websiteFrameRight" class="websiteFrame"></div>
         <div id="websiteFrameBottom" class="websiteFrame"></div>

@@ -66,18 +66,26 @@
   font-weight: bold;
   font-size: 2em
 }
-
 .pos:hover {
     background: #a0af92;
     text-decoration: none;
     color: #fefffe;
 }
 
-// 投稿ボタン
+// 投稿ボタンの説明
 .tasu {
   background-color: #C1D8AC;
   color: #fefffe;
 }
+
+// body部分
+.bdy {
+  width: 100%;
+  max-width: 90%;
+  padding: 25px;
+  margin: auto;
+}
+
 
 // フレーム
 .websiteFrame {
