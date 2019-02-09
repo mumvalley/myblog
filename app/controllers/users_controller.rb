@@ -11,7 +11,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-
+      redirect_to user_url(@user)
+      flash[:success] = "ようこそ「Huttsu no Blog」へ！！"
     else
       redirect_to new_user_path, flash: {
         error_messages: @user.errors.full_messages
