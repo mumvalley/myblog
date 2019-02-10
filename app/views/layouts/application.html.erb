@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>App</title>
+    <title>Huttsu no Blog</title>
     <%= favicon_link_tag('favicon.png') %>
     <%= csrf_meta_tags %>
 
@@ -25,6 +25,8 @@
         <% end %>
       </div>
       <%= yield %>
+      <!-- 開発環境でのデバック -->
+      <%= debug(params) if Rails.env.development? %>
       <!-- フッター -->
       <footer class="blog-footer text-center mt-5">
        <p><%= link_to 'このブログについて', "#" %></p>

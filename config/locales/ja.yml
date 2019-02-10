@@ -10,7 +10,7 @@ ja:
     attributes:
       user:
         name: 名前
-        email: Eメール
+        email: メール
         password: パスワード
         password_confirmation: パスワードの確認
       board:

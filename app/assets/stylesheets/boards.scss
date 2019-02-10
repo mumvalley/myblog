@@ -86,6 +86,21 @@
   margin: auto;
 }
 
+// ボタン
+.btn {
+  background-color: #C1D8AC;
+  color: #fefffe;
+  border: none;
+  border-radius: 50%;
+  width: 87px;
+  height: 65px;
+}
+.btn:hover, .btn:active, .btn:active:focus {
+  background: #a0af92;
+  text-decoration: none;
+  color: #fefffe;
+}
+
 
 // フレーム
 .websiteFrame {
