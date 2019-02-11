@@ -14,10 +14,10 @@
 
 // ロゴ
 .blog-header-logo {
-  position: fixed;
-  top: 9%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  // position: fixed;
+  // top: 9%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
   transition: .3s;
   width: 87px;
   height: 87px;
@@ -87,7 +87,7 @@
 }
 
 // ボタン
-.btn {
+.sign-btn {
   background-color: #C1D8AC;
   color: #fefffe;
   border: none;
@@ -95,7 +95,7 @@
   width: 87px;
   height: 65px;
 }
-.btn:hover, .btn:active, .btn:active:focus {
+.sign-btn:hover, .sign-btn:active, .sign-btn:active:focus {
   background: #a0af92;
   text-decoration: none;
   color: #fefffe;

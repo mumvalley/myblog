@@ -1,15 +1,25 @@
 <!-- ヘッダー -->
 <header class="blog-header py-3 bg-transparent">
   <div class="row flex-nowrap justify-content-center align-items-center">
-    <div class="col-4 pt-1">
-      <%= link_to '三', boards_path, class: "text-muted" %>
+    <div class="col-4">
+      <div class="btn-group">
+        <button type="button" class="sign-btn btn btn-outline-secondary btn-sm dropdown-toggle" data-toggle="dropdown">メニュー</button>
+        <div class="dropdown-menu dropdown-menu-left">
+          <% if logged_in? %>
+          <%= link_to "プロフィール", current_user, class: "dropdown-item btn-sm", method: :delete %>
+          <%= link_to "タグ", "#", class: "dropdown-item btn-sm" %>
+          <% else %>
+          <%= link_to "このブログについて", "#", class: "dropdown-item btn-sm" %>
+          <% end %>
+        </div>
+      </div>
     </div>
     <div class="col-4 text-center">
-      <%= link_to 'Blog', boards_path, class: "blog-header-logo sticky-top" %>
+      <%= link_to 'Blog', boards_path, class: "blog-header-logo" %>
     </div>
     <div class="col-4 d-flex justify-content-end align-items-center">
       <div class="btn-group">
-        <button type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle" data-toggle="dropdown">サイン</button>
+        <button type="button" class="sign-btn btn btn-outline-secondary btn-sm dropdown-toggle" data-toggle="dropdown">サイン</button>
         <div class="dropdown-menu dropdown-menu-right">
           <% if logged_in? %>
           <%= link_to "ログアウト", logout_path, class: "dropdown-item btn-sm", method: :delete %>
@@ -21,7 +31,7 @@
       </div>
     </div>
   </div>
-<!-- ナビバー -->
+<!-- ナビバー
 <div class="nav-scroller py-1 mb-2">
   <nav class="nav d-flex justify-content-start">
     <%= link_to 'プロフィール', "/users/2", class: "p-2 text-muted" %>
@@ -29,3 +39,4 @@
     <%= link_to 'タグ', "#", class: "p-2 text-muted" %>
   </nav>
 </div>
+-->

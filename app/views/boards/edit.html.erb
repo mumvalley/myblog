@@ -1,8 +1,5 @@
-<div class="m-1 d-flex align-items-center">
-  <h1>編集画面</h1>
-  <div class="ml-auto posts_button">
-      <%= link_to "Top", boards_path, class: "btn btn-sm btn-outline-secondary" %>
-  </div>
+<div class="text-center">
+  <h1 class="h3 m-3 font-weight-normal">編集画面</h1>
 </div>
 <%# フォーム %>
 <%= render partial: 'form', locals: { board: @board } %>
