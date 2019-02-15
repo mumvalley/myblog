@@ -3,7 +3,7 @@ class BoardsController < ApplicationController
   before_action :set_board, only: %i[show edit update destroy]
   # 投稿一覧の取得
   def index
-    @boards = Board.page(params[:page])
+    @boards = Board.order("created_at desc").page(params[:page])
   end
 
   # 新規作成画面表示
