@@ -6,7 +6,7 @@
         <button type="button" class="sign-btn btn btn-outline-secondary btn-sm dropdown-toggle" data-toggle="dropdown">メニュー</button>
         <div class="dropdown-menu dropdown-menu-left">
           <% if logged_in? %>
-          <%= link_to "プロフィール", current_user, class: "dropdown-item btn-sm", method: :delete %>
+          <%= link_to "プロフィール", "#", class: "dropdown-item btn-sm"%>
           <%= link_to "タグ", "#", class: "dropdown-item btn-sm" %>
           <% else %>
           <%= link_to "このブログについて", "#", class: "dropdown-item btn-sm" %>

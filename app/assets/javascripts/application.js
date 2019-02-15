@@ -18,3 +18,4 @@
 //= require_tree .
 // = require data-confirm-modal
 //= require toastr
+//= require uikit

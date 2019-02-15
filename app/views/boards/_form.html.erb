@@ -1,18 +1,28 @@
+<!-- 投稿フォーム,編集フォーム -->
 <%= render 'shared/error_messages'%>
 <%= form_with model: @board do |f| %>
     <div class="mx-2 form-group">
         <%= f.label :title, '投稿タイトル' %>
-        <%= f.text_field :title, class: 'form-control' %>
-        <small id="title-tip" class="form-text text-muted">
-            タイトルを入力してください。
-        </small>
+        <%= f.text_field :title, class: 'form-control', placeholder: 'タイトルを入力してください' %>
     </div>
     <div class=" mx-2 form-group">
         <%= f.label :body, '投稿内容' %>
-        <%= f.text_area :body, class: 'form-control', rows:10 %>
-        <small id=content-tip" class="form-text text-muted">
-            投稿内容を入力してください。
-        </small>
+        <%= f.text_area :body, id: 'editor', data_preview: '#preview',  class: 'form-control', rows: '10', placeholder: '投稿内容を入力してください' %>
     </div>
     <%= f.submit '保存', class: 'btn btn-info mx-auto d-block btn-outline-secondary' %>
 <% end %>
+<textarea data-uk-htmleditor="{markdown:true}">...</textarea>
+<div id="preview"></div>
+
+<!-- <div class="container">
+  <div class="row">
+    <div id='editor'>
+      <div class="col">
+        <textarea id='input' v-model='input' debounce='100'></textarea>
+      </div>
+      <div class="col">
+        <div id='output' v-html='input | marked'></div>
+      </div>
+    </div>
+  </div>
+</div> -->

@@ -13,3 +13,16 @@ $(function() {
     }
   });
 });
+
+// マークダウンプレビュー
+window.onload = function() {
+  new Vue({
+    el: '#editor',
+    data: {
+      input: '### Mark Down記法が使えます。',
+    },
+    filters: {
+      marked: marked,
+    },
+  });
+};
