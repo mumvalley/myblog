@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'home#index'
   resources :boards
   resources :users, only: %i[new show create]
   get '/login', to: 'sessions#new'
